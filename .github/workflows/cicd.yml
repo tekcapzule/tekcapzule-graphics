@@ -1,0 +1,42 @@
+name: CICD Pipeline
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    types: [opened, synchronize, reopened]
+env:
+  SERVER_PASSWORD: ${{ secrets.SERVER_PASSWORD }}
+  SERVER_USERNAME: ${{ secrets.SERVER_USERNAME }}
+jobs:
+  setupInfra:
+    name: Setup Prod Hosting Infra
+    environment:
+      name: PROD
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: deploy cloudformation stack
+        uses: aws-actions/aws-cloudformation-github-deploy@v1
+        with:
+          name: s3-bucket-tekcapsule-graphics
+          template: setup-graphics-infra.yaml
+          parameter-overrides: "MyParam1=myValue,MyParam2=${{ secrets.MY_SECRET_VALUE }}"
+  deploy:
+    name: Upload graphics to S3 Bucket
+    needs: setupInfra
+    environment:
+      name: PROD
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Deploy to S3
+        uses: jakejarvis/s3-sync-action@master
+        with:
+          args: --acl public-read --follow-symlinks --delete
+        env:
+          ACTIONS_ALLOW_UNSECURE_COMMANDS: ${{ secrets.ACTIONS_ALLOW_UNSECURE_COMMANDS }}
+          AWS_S3_BUCKET: ${{ secrets.AWS_BUCKET_NAME }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: ${{ secrets.AWS_REGION }}
