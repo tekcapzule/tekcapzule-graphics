@@ -11,7 +11,7 @@ Parameters:
     Type: String
   BucketName:
     Type: String
-    Default: graphics.example.com
+    Default: graphics.tekcapsule.com
 
 Resources:
   S3Bucket:
