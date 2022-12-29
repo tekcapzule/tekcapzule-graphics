@@ -43,7 +43,7 @@ Resources:
       DomainName: !Ref BucketName
       # add www to certificate
       SubjectAlternativeNames:
-        - !Sub "www.${DomainName}"
+        - !Sub "www.${BucketName}"
       ValidationMethod: DNS
       DomainValidationOptions:
         # DNS record for the naked domain
@@ -125,7 +125,12 @@ Resources:
             DNSName: !GetAtt CloudFrontDistribution.DomainName
             EvaluateTargetHealth: false
             HostedZoneId: Z2FDTNDATAQYW2 # leave hardcoded, don't confuse w/ !Ref HostedZoneId
-
+        - Name: !Ref BucketName
+          Type: AAA
+          AliasTarget:
+            DNSName: !GetAtt CloudFrontDistribution.DomainName
+            EvaluateTargetHealth: false
+            HostedZoneId: Z2FDTNDATAQYW2 # leave hardcoded, don't confuse w/ !Ref HostedZoneId
 Outputs:
   WebsiteURL:
     Value: !GetAtt S3Bucket.WebsiteURL
