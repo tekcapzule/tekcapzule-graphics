@@ -49,9 +49,21 @@
 
 
 <!-- ABOUT THE PROJECT -->
+
 ## About The Project
 
 This repository contains different types of graphic files used in TekCapsule project. A CICD pipeline is setup to publish these artifacts to AWS S3 bucket.
+
+**Image Location:-**
+
+* Images for Topic - https://graphics.tekcapsule.com/Topic/[Topic-Code]/[Topic-Code].jpg
+* Images for Capsule - https://graphics.tekcapsule.com/Capsule/[Topic-Code]/[Topic-Code]_[1-10].jpg
+* Default Images - https://graphics.tekcapsule.com/Default/Default_[1-10].jpg
+
+**Eg:** 
+* Images for Topic - https://graphics.tekcapsule.com/Topic/5GT/5GT.jpg
+* Images for Capsule - https://graphics.tekcapsule.com/Capsule/5GT/5GT_1.jpg
+* Default Images - https://graphics.tekcapsule.com/Default/Default_1.jpg
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
