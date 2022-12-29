@@ -40,17 +40,17 @@ Resources:
     Type: AWS::CertificateManager::Certificate
     Properties:
       # naked domain
-      DomainName: !Ref DomainName
+      DomainName: !Ref BucketName
       # add www to certificate
       SubjectAlternativeNames:
         - !Sub "www.${DomainName}"
       ValidationMethod: DNS
       DomainValidationOptions:
         # DNS record for the naked domain
-        - DomainName: !Ref DomainName
+        - DomainName: !Ref BucketName
           HostedZoneId: !Ref HostedZoneId
         # DNS record for the www domain
-        - DomainName: !Sub "www.${DomainName}"
+        - DomainName: !Sub "www.${BucketName}"
           HostedZoneId: !Ref HostedZoneId
   #
   CloudFrontDistribution:
@@ -58,8 +58,8 @@ Resources:
     Properties:
       DistributionConfig:
         Aliases:
-          - !Ref DomainName
-          - !Sub "www.${DomainName}"
+          - !Ref BucketName
+          - !Sub "www.${BucketName}"
         CustomErrorResponses:
           - ErrorCachingMinTTL: 60
             ErrorCode: 404
