@@ -11,7 +11,7 @@
   <img src="https://user-images.githubusercontent.com/9839481/209770761-99fd940f-3c75-407b-a339-9fd2cd2c5b7f.svg">
   <h3 align="center">TekCapsule Graphics</h3>
   <p align="center">
-    A set of lambda functions to manage users in TekCapsule
+    Images and other creative artifacts
     <br />
     <a href="https://www.tekcapsule.com/">View Demo</a> |
     <a href="https://github.com/tekcapsule/tekcapsule-graphics/issues">Report Bug</a> |
@@ -20,7 +20,7 @@
 </div>
 <div align="center">
   
-  <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=389065421&machine=standardLinux32gb&location=SouthEastAsia">![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)</a>
+  <a href="https://github.com/codespaces/new?hide_repo_select=true&ref=main&repo=582247639&machine=standardLinux32gb&location=SouthEastAsia">![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)</a>
 
 </div>
 
@@ -51,15 +51,12 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This project contains set of functions written in Java 11 to create, update, query and manage TekCapsule users. It is a multi-module maven project with two modules named application & domain. Application module is a springboot application that exposes these functions and domain module contains the domain logic.
+This repository contains different types of graphic files used in TekCapsule project. A CICD pipeline is setup to publish these artifacts to AWS S3 bucket.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Built With
 
-* ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=java&logoColor=white)
-* ![Spring](https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white)
-* ![Apache Maven](https://img.shields.io/badge/Apache%20Maven-C71A36?style=for-the-badge&logo=Apache%20Maven&logoColor=white)
 * ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -72,33 +69,14 @@ Please follow the below instructions to setup the project locally.
 ### Prerequisites
 
 This project requires following softwares: 
-* SAM  
-* JAVA 11
-* Maven 
+* None 
 
 ### Installation
 
 Please follow the step by step instructions to install the required softwares and setup the project.
-1. Get the AWS Access Key details
-2. Clone the repo
+1. Clone the repo
    ```sh
    git clone https://github.com/tekcapsule/tekcapsule-graphics.git
-   ```
-3. Install SAM CLI by following instructions https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/install-sam-cli.html
-4. Configure the following Environment variables
-* APPLICATION_ENVIRONMENT=<Environment_Name>
-* CLOUD_REGION=<Region_Name>
-* secrets.AWS_ACCESS_KEY_ID=<Access_KEY_ID>
-* secrets.AWS_SECRET_ACCESS_KEY=<Access_KEY_Value>
-* secrets.SERVER_PASSWORD=<SERVER_PASSWORD>
-* secrets.SERVER_USERNAME=<SERVER_USERNAME>
-
-Note: SERVER_USERNAME and SERVER_PASSWORD details will be be provided by the maintainers on request.
-
-5. Copy the settings.xml to ~/.m2
-6. Run the command
-   ```sh
-   sam build
    ```
    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
