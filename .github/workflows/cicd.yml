@@ -5,9 +5,6 @@ on:
       - main
   pull_request:
     types: [opened, synchronize, reopened]
-env:
-  SERVER_PASSWORD: ${{ secrets.SERVER_PASSWORD }}
-  SERVER_USERNAME: ${{ secrets.SERVER_USERNAME }}
 jobs:
   setupInfra:
     name: Setup Prod Hosting Infra
@@ -23,7 +20,7 @@ jobs:
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ secrets.AWS_REGION }}
+          aws-region: "us-east-1"
       - name: deploy cloudformation stack
         uses: aws-actions/aws-cloudformation-github-deploy@v1
         with:
@@ -48,5 +45,5 @@ jobs:
           AWS_S3_BUCKET: "graphics.tekcapsule.com"
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          AWS_REGION: ${{ secrets.AWS_REGION }}
+          AWS_REGION: "us-east-1"
           SOURCE_DIR: 'graphics'
