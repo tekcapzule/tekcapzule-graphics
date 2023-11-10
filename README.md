@@ -1,21 +1,21 @@
 <!-- PROJECT SHIELDS -->
 <a name="readme-top"></a>
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
-[![Main Branch](https://github.com/tekcapsule/tekcapsule-graphics/actions/workflows/cicd.yml/badge.svg)](https://github.com/tekcapsule/tekcapsule-graphics/actions/workflows/cicd.yml) 
-[![Github all releases](https://img.shields.io/github/downloads/tekcapsule/tekcapsule-graphics/total.svg)](https://GitHub.com/tekcapsule/tekcapsule-graphics/releases/)
+[![Main Branch](https://github.com/tekcapzule/tekcapzule-graphics/actions/workflows/cicd.yml/badge.svg)](https://github.com/tekcapzule/tekcapzule-graphics/actions/workflows/cicd.yml) 
+[![Github all releases](https://img.shields.io/github/downloads/tekcapzule/tekcapzule-graphics/total.svg)](https://GitHub.com/tekcapzule/tekcapzule-graphics/releases/)
 
 
 <!-- PROJECT LOGO -->
 
 <div align="center">
   <img src="https://user-images.githubusercontent.com/9839481/209770761-99fd940f-3c75-407b-a339-9fd2cd2c5b7f.svg">
-  <h3 align="center">TekCapsule Graphics</h3>
+  <h3 align="center">TekCapzule Graphics</h3>
   <p align="center">
     Images and other creative artifacts
     <br />
-    <a href="https://www.tekcapsule.com/">View Demo</a> |
-    <a href="https://github.com/tekcapsule/tekcapsule-graphics/issues">Report Bug</a> |
-    <a href="https://github.com/tekcapsule/tekcapsule-graphics/issues">Request Feature</a>
+    <a href="https://www.tekcapzule.com/">View Demo</a> |
+    <a href="https://github.com/tekcapzule/tekcapzule-graphics/issues">Report Bug</a> |
+    <a href="https://github.com/tekcapzule/tekcapzule-graphics/issues">Request Feature</a>
   </p>
 </div>
 <div align="center">
@@ -52,18 +52,18 @@
 
 ## About The Project
 
-This repository contains different types of graphic files used in TekCapsule project. A CICD pipeline is setup to publish these artifacts to AWS S3 bucket.
+This repository contains different types of graphic files used in tekcapzule project. A CICD pipeline is setup to publish these artifacts to AWS S3 bucket.
 
 **Image Location:-**
 
-* Images for Topic - https://graphics.tekcapsule.com/Topic/[Topic-Code]/[Topic-Code].jpg
-* Images for Capsule - https://graphics.tekcapsule.com/Capsule/[Topic-Code]/[Topic-Code]_[1-10].jpg
-* Default Images - https://graphics.tekcapsule.com/Default/Default_[1-10].jpg
+* Images for Topic - https://graphics.tekcapzule.com/Topic/[Topic-Code]/[Topic-Code].jpg
+* Images for Capsule - https://graphics.tekcapzule.com/Capsule/[Topic-Code]/[Topic-Code]_[1-10].jpg
+* Default Images - https://graphics.tekcapzule.com/Default/Default_[1-10].jpg
 
 **Eg:** 
-* Images for Topic - https://graphics.tekcapsule.com/Topic/5GT/5GT.jpg
-* Images for Capsule - https://graphics.tekcapsule.com/Capsule/5GT/5GT_1.jpg
-* Default Images - https://graphics.tekcapsule.com/Default/Default_1.jpg
+* Images for Topic - https://graphics.tekcapzule.com/Topic/5GT/5GT.jpg
+* Images for Capsule - https://graphics.tekcapzule.com/Capsule/5GT/5GT_1.jpg
+* Default Images - https://graphics.tekcapzule.com/Default/Default_1.jpg
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -88,7 +88,7 @@ This project requires following softwares:
 Please follow the step by step instructions to install the required softwares and setup the project.
 1. Clone the repo
    ```sh
-   git clone https://github.com/tekcapsule/tekcapsule-graphics.git
+   git clone https://github.com/tekcapzule/tekcapzule-graphics.git
    ```
    
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -97,7 +97,7 @@ Please follow the step by step instructions to install the required softwares an
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/tekcapsule/tekcapsule-graphics/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/tekcapzule/tekcapzule-graphics/issues) for a list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,7 +116,7 @@ Don't forget to give the project a star! Thanks again!
 5. Open a Pull Request
 
 ## Contributors
-<img src= "https://contrib.rocks/image?repo=tekcapsule/tekcapsule-graphics">
+<img src= "https://contrib.rocks/image?repo=tekcapzule/tekcapzule-graphics">
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
